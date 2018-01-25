@@ -24,7 +24,7 @@ render(){
       <ScrollView>
       {this.state.data.map(fruitInfo =>
         <TouchableOpacity key={fruitInfo.id}
-          onPress={() => this.props.navigation.navigate('SingleFruit')}>
+          onPress={() => this.props.navigation.navigate('SingleFruit', {id: fruitInfo.id})}>
           <Text style= {styles.fruit}>{fruitInfo.title}</Text>
         </TouchableOpacity>
         )}
@@ -39,9 +39,16 @@ const styles = StyleSheet.create({
 container: {
   flex: 1,
   alignItems: 'center',
-  justifyContent: 'center'
+  justifyContent: 'center',
+    backgroundColor: 'whitesmoke'
 },
 fruit:{
-  fontSize: 20
+  flex: 1,
+  width: 320,
+  fontSize: 20,
+  borderWidth: 1,
+  borderBottomWidth: 1,
+  borderColor: 'white',
 }
+
 })

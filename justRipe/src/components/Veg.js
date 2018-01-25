@@ -24,7 +24,7 @@ console.log("here", this.state.data);
       <ScrollView>
       {this.state.data.map(vegInfo =>
         <TouchableOpacity key={vegInfo.id}
-            onPress={() => this.props.navigation.navigate('SingleVeg')}>
+            onPress={() => this.props.navigation.navigate('SingleVeg', {id: vegInfo.id})}>
           <Text style= {styles.veg}>{vegInfo.title}</Text>
         </TouchableOpacity>
         )}
@@ -42,6 +42,11 @@ container: {
   justifyContent: 'flex-start',
 },
 veg:{
-  fontSize: 20
+  flex: 1,
+  width: 320,
+  fontSize: 20,
+  borderWidth: 1,
+  borderBottomWidth: 1,
+  borderColor: 'white',
 }
 })
