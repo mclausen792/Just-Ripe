@@ -23,7 +23,8 @@ console.log("here", this.state.data);
     <View style={styles.container}>
       <ScrollView>
       {this.state.data.map(vegInfo =>
-        <TouchableOpacity key={vegInfo.id}>
+        <TouchableOpacity key={vegInfo.id}
+            onPress={() => this.props.navigation.navigate('SingleVeg')}>
           <Text style= {styles.veg}>{vegInfo.title}</Text>
         </TouchableOpacity>
         )}

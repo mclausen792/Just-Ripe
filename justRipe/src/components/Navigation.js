@@ -4,6 +4,8 @@ import { SafeAreaView, StackNavigator } from 'react-navigation';
 import Landing from './Landing'
 import Fruit from './Fruit'
 import Veg from './Veg'
+import SingleFruit from './SingleFruit'
+import SingleVeg from './SingleVeg'
 
 const Navigation = StackNavigator({
   Main: {
@@ -24,7 +26,20 @@ const Navigation = StackNavigator({
       title: "Vegetables"
 
     }
+  },
+  SingleFruit: {
+    screen: SingleFruit,
+    navigationOptions: {
+      title: "Item Info",
+    }
+  },
+  SingleVeg: {
+    screen: SingleVeg,
+    navigationOptions: {
+      title: "Item Info",
+    }
   }
 })
+
 
 export default Navigation
