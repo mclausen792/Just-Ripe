@@ -8,28 +8,7 @@ export default class App extends React.Component {
 
   constructor(){
       super()
-
-      // this.state = {
-      //   landing: true,
-      //   // fruit: false,
-      //   // veg:false
-      // }
-
-    }
-  homeScreen = (e) => {
-    this.setState({'activeSecond':false})
-    this.componentDidMount()
-  }
-  //
-  // gotoFruit = () => {
-  //   this.setState({fruit: true, landing:false, veg:false })
-  //
-  // }
-  //
-  // gotoVeg = () => {
-  //   this.setState({veg: true, landing:false, fruit: false})
-  //
-  // }
+}
   render() {
     return (
       <View style={styles.container}>

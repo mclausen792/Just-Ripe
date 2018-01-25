@@ -14,7 +14,6 @@ import {
 import { StackNavigator } from 'react-navigation';
 
 
-
 export default class Landing extends React.Component {
 
   constructor(props) {
