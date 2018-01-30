@@ -10,7 +10,7 @@ Mobile app used to aid in selecting, storing, and ripening your favorite produce
 
 ## Use it
 After installing the expo app
-![JustRipe](https://github.com/mclausen792/Just-Ripe/blob/master/justRipe/images/JustRipe-QR.png)
+![JustRipe](https://github.com/mclausen792/Just-Ripe/blob/master/justRipe/images/JustRipe-QR.PNG)
 
 ## Technologies
 - React native
