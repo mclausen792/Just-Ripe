@@ -9,16 +9,39 @@ export default class Fruit extends React.Component {
       this.state = {
         data: []
       }
+      console.log("What is data here", this.state.data);
   }
+
+
+
 async componentDidMount() {
   const response = await fetch(`https://just-ripe.herokuapp.com/fruit`)
   const json = await response.json()
     this.setState({data: json})
-    // console.log(this.state.data);
+    console.log("unsorted data", this.state.data);
+}
+sortFruit(){
+let data = this.state.data
+let sorted = data.sort(function(a, b) {
+var nameA = a.title.toUpperCase(); // ignore upper and lowercase
+var nameB = b.title.toUpperCase(); // ignore upper and lowercase
+
+if (nameA < nameB) {
+  return -1;
 }
 
-render(){
+if (nameA > nameB) {
+  return 1;
+}
 
+return 0;
+})
+console.log("Sorted", this.state.data);
+}
+
+
+
+render(){
   return (
     <View style={styles.container}>
       <ScrollView>
@@ -40,7 +63,7 @@ container: {
   flex: 1,
   alignItems: 'center',
   justifyContent: 'center',
-    backgroundColor: 'whitesmoke'
+backgroundColor: 'whitesmoke'
 },
 fruit:{
   flex: 1,

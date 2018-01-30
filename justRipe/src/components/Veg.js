@@ -40,6 +40,7 @@ container: {
   flex: 1,
   alignItems: 'flex-start',
   justifyContent: 'flex-start',
+  backgroundColor: 'whitesmoke'
 },
 veg:{
   flex: 1,
