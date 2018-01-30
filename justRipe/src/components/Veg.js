@@ -10,10 +10,31 @@ export default class Veg extends React.Component {
         data: []
       }
   }
+
+  sortVeg(){
+  let data = this.state.data
+  let sorted = data.sort(function(a, b) {
+  var nameA = a.title.toUpperCase(); // ignore upper and lowercase
+  var nameB = b.title.toUpperCase(); // ignore upper and lowercase
+
+  if (nameA < nameB) {
+    return -1;
+  }
+
+  if (nameA > nameB) {
+    return 1;
+  }
+
+  return 0;
+  })
+  this.setState({data: this.state.data})
+  }
+
 async componentDidMount() {
   const response = await fetch(`https://just-ripe.herokuapp.com/vegetable`)
   const json = await response.json()
     this.setState({data: json})
+    this.sortVeg()
     console.log(this.state.data);
 }
 
