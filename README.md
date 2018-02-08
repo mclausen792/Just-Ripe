@@ -7,7 +7,7 @@ Mobile app used to aid in selecting, storing, and ripening your favorite produce
 ![JustRipe](https://github.com/mclausen792/Just-Ripe/blob/master/justRipe/images/screens.png)
 
 ## Video
-Find a walkthrough of my app [here](https://www.youtube.com/watch?v=4_2qHsgUD2E&feature=youtu.be)
+Find a walkthrough of my app [here](https://www.youtube.com/watch?v=ViP_-47wifc&feature=youtu.be)
 
 ## Use it
 After installing the expo app
